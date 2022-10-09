@@ -1,0 +1,189 @@
+*{
+    @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+}
+
+body {
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+}
+
+#section_bhp{
+    background-image: url(img/background/camera.jpg);
+    background-size: cover;
+	background-position: center;
+ 	background-repeat: no-repeat, repeat;
+}
+.header_bottom {
+    background: rgb(204, 53, 53);
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.main_nav {
+    text-align: center;
+}
+
+.main_nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.main_nav ul li {
+    display: inline-block;
+    margin-left: 30px;
+    font-family: 'Oswald';
+    font-size: 18px;
+    transition: background-color 0.5s linear 0s;
+    transition: padding 0.5s ease 0s;
+}
+
+.main_nav ul li:hover {
+    background-color: #3d3d3d;
+    padding: 5px;
+}
+
+.main_nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#bhp_text{
+    padding: 46px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    color: white;
+    font-family: 'Oswald';
+    font-size: 68px;
+}
+
+#about_bhp{
+    display: grid;
+    place-content: center;
+    color: white;
+    font-family:'Oswald';
+    font-size: 24px;
+    padding: 54px;
+    line-height: 6.5vh;
+}
+
+
+footer{
+    background-color: #3d3d3d;
+}
+
+#big_footer_container{
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+#left_footer_container{
+    margin-left: 20px;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    line-height: 25px;
+}
+
+#left_footer_container ul{
+    list-style: none;
+    font-family: 'Oswald';
+}
+
+#left_footer_container ul li{
+    color: white;
+    line-height: 25px;
+    transition: color 0.3s ease 0s; 
+}
+
+
+#left_footer_container a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Oswald';
+}
+
+#nalewek_ig{
+    color: white; 
+    transition: color 0.3s ease 0s; 
+}
+
+#nalewek_ig:hover{
+    color: #b2b2b2;
+}
+
+#center_footer_container img{
+    height: 200px;
+    width: 200px;
+}
+
+#right_footer_container{
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+#ul_footer_container{
+    list-style: none;
+    color: white;
+    font-family: 'Oswald';
+}
+
+#ul_footer_container li a{
+    text-decoration: none;
+    color: white;
+    line-height: 25px;
+    transition: color 0.3s ease 0s; 
+}
+
+#ul_footer_container li a:hover{
+    color: #b2b2b2;
+}
+
+#down_footer_container{
+    display: grid;
+    place-content: center;
+    font-size: 18px;
+    padding-bottom: 20px;
+    color: white;
+}
+
+#social_solid{
+    z-index: 1000000;
+}
+
+#fb_solid{
+    position: fixed;
+    top: 305px;
+    left: 0px;
+    background-color: #3b5998;
+    border-radius: 10%;
+}
+
+#fb_solid img{
+    width: 60px;
+    height: 60px;
+    background-color: #3b5998;
+    border-radius: 10%;
+}
+
+#ig_solid{
+    position: fixed;
+    top: 369px;
+    left: 0px;
+    background-color: white;
+    border-radius: 26%;
+    width: 60px;
+    height: 60px;
+}
+
+#ig_solid img{
+    width: 60px;
+    height: 60px;
+}
