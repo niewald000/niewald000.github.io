@@ -1,77 +1,188 @@
 *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+    text-decoration: none;
 }
 
 body {
+    background-image: url(img/background/camera.jpg);
+    background-size: cover;
+	background-position: center;
+ 	background-repeat: no-repeat, repeat;
     scroll-behavior: smooth;
     margin: 0;
     padding: 0;
 }
 
-#section_bhp{
-    background-image: url(img/background/camera.jpg);
-    background-size: cover;
-	background-position: center;
- 	background-repeat: no-repeat, repeat;
+
+a{
+	text-decoration: none;
 }
-.header_bottom {
-    background: rgb(204, 53, 53);
-    padding: 20px 0;
+ul{
+	list-style: none;
+}
+.container{
+	max-width: 1170px;
+	margin: auto;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+.align-items-center{
+	align-items: center;
+}
+.justify-content-between{
+	justify-content: space-between;
+}
+/*header*/
+.header{
+	background-color: rgb(204, 53, 53);
+	padding: 20px 0;
     position: sticky;
     top: 0;
     z-index: 10;
 }
 
-.main_nav {
-    text-align: center;
+.header .nav ul li{
+	display: inline-block;
+	margin-left: 40px;
 }
-
-.main_nav ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-.main_nav ul li {
-    display: inline-block;
-    margin-left: 30px;
+.header .nav ul li a{
+	display: block;
+	font-size: 16px;
     font-family: 'Oswald';
-    font-size: 18px;
-    transition: background-color 0.5s linear 0s;
-    transition: padding 0.5s ease 0s;
+	padding:10px 0;
+	color: white;
+	text-transform: capitalize;
+	transition: all 0.5s ease;
+}
+.header .nav ul li a:hover{
+	color: #b2b2b2;
+}
+.header #nav-check{
+	position: absolute;
+	opacity:0;
+	pointer-events: none;
+}
+.nav-toggler{
+	height: 34px;
+	width: 44px;
+	background-color: rgb(204, 53, 53);
+	border-radius: 4px;
+	cursor: pointer;
+	display: none;
+	align-items: center;
+	justify-content: center;
+	margin-right: 15px;
+}
+.nav-toggler span{
+	display: block;
+	height: 2px;
+	width: 20px;
+	background-color:  rgb(204, 53, 53);
+	position: relative;
+}
+.nav-toggler span::before,
+.nav-toggler span::after{
+   content: '';
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   background-color: white;
+   left:0;
+}
+.nav-toggler span::before{
+	top: -6px;
+}
+.nav-toggler span::after{
+	top: 6px;
+}
+@media(max-width: 991px){
+    .nav-toggler{
+    	display: flex;
+    }
+    .header .nav{
+    	position: absolute;
+    	left:0;
+    	top:100%;
+    	width: 100%;
+    	background-color: rgb(204, 53, 53);
+    	border-top: 1px solid rgba(255,255,255,0.2);
+    	opacity:0;
+    	visibility: hidden;
+    }
+    .header .nav ul li{
+    	display: grid;
+        place-content: center;
+    	margin:0;
+    }
+    .header #nav-check:checked ~ .nav{
+       opacity: 1;
+       visibility: visible;
+    }
+    .header #nav-check:focus ~ .nav-toggler{
+    	box-shadow: 0 0 15px #000000;
+    }
+    .header #nav-check:checked ~ .nav-toggler span{
+    	background-color: transparent;
+    }
+    .header #nav-check:checked ~ .nav-toggler span::before{
+    	top:0;
+    	transform: rotate(45deg);
+    }
+    .header #nav-check:checked ~ .nav-toggler span::after{
+    	top:0;
+    	transform: rotate(-45deg);
+    }
 }
 
-.main_nav ul li:hover {
-    background-color: #3d3d3d;
-    padding: 5px;
-}
-
-.main_nav ul li a {
-    color: #fff;
-    text-decoration: none;
+#big_about{
+    display: grid;
+    place-content: center;
 }
 
 #bhp_text{
-    padding: 46px;
-    margin: 0;
+    font-size: 36px;
+    padding: 20px;
+    font-family: 'Oswald';
+    color: white;
     display: flex;
     justify-content: center;
     align-content: center;
-    color: white;
-    font-family: 'Oswald';
-    font-size: 68px;
 }
+
 
 #about_bhp{
+    list-style: none;
+    color: white;
+    font-family: 'Oswald';
+    line-height: 50px;
     display: grid;
     place-content: center;
-    color: white;
-    font-family:'Oswald';
-    font-size: 24px;
-    padding: 54px;
-    line-height: 6.5vh;
 }
 
+#about_szkolenia a{
+    background-color: rgb(204, 53, 53);
+    text-decoration: none;
+    font-family: 'Oswald';
+    color: white;
+    font-size: 48px;
+    padding: 30px;
+    display: grid;
+    place-content: center;
+    transition: all 0.3s ease 0s;
+}
+
+#about_szkolenia a:hover{
+    color: #b2b2b2;
+    font-size: 56px;
+}
 
 footer{
     background-color: #3d3d3d;
@@ -84,12 +195,13 @@ footer{
 }
 
 #left_footer_container{
+    width: 250px;
+    font-size: 18px;
     margin-left: 20px;
     margin-top: 20px;
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
-    line-height: 25px;
+    line-height: 30px;
 }
 
 #left_footer_container ul{
@@ -99,15 +211,17 @@ footer{
 
 #left_footer_container ul li{
     color: white;
-    line-height: 25px;
-    transition: color 0.3s ease 0s; 
 }
-
 
 #left_footer_container a{
     text-decoration: none;
     color: white;
     font-family: 'Oswald';
+    transition: all 0.5s ease 0s;
+}
+
+#left_footer_container a:hover{
+    color:  #b2b2b2;
 }
 
 #nalewek_ig{
@@ -149,9 +263,24 @@ footer{
 #down_footer_container{
     display: grid;
     place-content: center;
-    font-size: 18px;
+    font-size: 24px;
     padding-bottom: 20px;
     color: white;
+    font-family: 'Oswald';
+}
+
+@media(max-width: 900px){
+    #left_footer_container ul li{
+        font-size: 12px;
+    }
+    
+    #ul_footer_container li a{
+        font-size: 12px;
+    }
+    
+    #down_footer_container{
+        font-size: 14px;
+    }
 }
 
 #social_solid{
@@ -186,4 +315,45 @@ footer{
 #ig_solid img{
     width: 60px;
     height: 60px;
+}
+
+@media(max-width: 900px){
+    
+    #title_referens h1{
+        font-size: 24px;
+    }
+    
+    #title_referens span{
+        font-size: 18px;
+    }
+    
+    .thumbnail{
+        width: 100px;
+        height: 100px;
+    }
+    
+    #fb_solid img{
+        width: 40px;
+        height: 40px;
+    }
+    
+    #ig_solid{
+        height: 40px;
+        width: 40px;
+        top: 350px;
+    }    
+    
+    #ig_solid img{
+        width: 40px;
+        height: 40px;
+    }
+    
+    
+    #about_szkolenia a{
+        font-size: 24px;
+    }
+    
+    #about_szkolenia a:hover{
+        font-size: 36px;
+    }
 }
