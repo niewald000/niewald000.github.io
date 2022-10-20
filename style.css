@@ -392,7 +392,6 @@ ul{
     width: 100%;
     margin-bottom: 10px;
     background: rgb(204, 53, 53);
-    padding: 10px;
     border-radius: 4px;
 }
 
@@ -431,6 +430,7 @@ ul{
 @media(max-width: 900px){
     #accordion{
         width: 400px;
+        padding: 10px;
     }
     
     #accordion li label{
@@ -498,7 +498,7 @@ ul{
     margin: 8px;
     font-family: 'Oswald';
     color: black;
-    font-size: 24px;
+    font-size: 12px;;
     transition: color 0.5s ease 0s;
 }
 
@@ -529,7 +529,7 @@ ul{
 
 @media(max-width: 900px){
     #skills_title{
-        font-size: 20px;
+        font-size: 18px;
     }
     
     .skills_element{
@@ -551,7 +551,7 @@ ul{
     }
     
     #skills_end{
-        font-size: 17px;
+        font-size: 14px;
         margin-left: 5px;
         margin-right: 5px;
     }
@@ -655,7 +655,7 @@ ul{
 @media(max-width: 900px){
     
     #referens__title{
-        font-size: 18px;
+        font-size: 14px;
     }
     
     .list__referens{
@@ -677,6 +677,10 @@ ul{
         place-content: center;
         font-size: 16px;
     }
+    
+    .image__overlay{
+        width: 123px;
+    }
 }
 
 #contact{
@@ -696,8 +700,9 @@ ul{
 }
 
 #big_container_contact{
-    display: grid;
-    place-content: center;
+    display: flex;
+    justify-content: center;
+    align-content: center;
     padding-bottom: 30px;
 }
 
@@ -743,8 +748,10 @@ ul{
 
 @media(max-width: 900px){
     
-    #big_contact_container{
-        margin-right: 20px;
+    #big_container_contact{
+        display: grid;
+        place-content: center;
+        
     }
     
     .contact_container{
@@ -754,18 +761,20 @@ ul{
     }
     
     .contact_container h1{
-        font-size: 20px;
+        font-size: 24px;
     }
     
     .contact_container a{
-        font-size: 20px;
+        font-size: 18px;
         height: 120px;
         width: 200px;
     }
     
     .contact_container a:hover{
         background-color:  #3d3d3d;
-        font-size: 21px;
+        font-size: 20px;
+        width: 210px;
+        height: 130px;
     }
 }
 
@@ -880,6 +889,6 @@ footer{
     }
     
     #down_footer_container{
-        font-size: 14px;
+        font-size: 10px;
     }
 }
